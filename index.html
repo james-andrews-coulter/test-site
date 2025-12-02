@@ -22,8 +22,33 @@
 					<td>50</td>
 					<td>25.50</td>
 				</tr>
+				<tr>
+					<td id="recent-date">2024-12-19</td>
+					<td>Recent entry</td>
+					<td>30</td>
+					<td>15.75</td>
+				</tr>
+				<tr>
+					<td id="older-date">2024-06-08</td>
+					<td>Older entry</td>
+					<td>75</td>
+					<td>42.00</td>
+				</tr>
 
 			</tbody>
 		</table>
+		<script>
+			// Set date within last one day (yesterday)
+			const yesterday = new Date();
+			yesterday.setDate(yesterday.getDate() - 1);
+			const yesterdayStr = yesterday.toISOString().split('T')[0];
+			document.getElementById('recent-date').textContent = yesterdayStr;
+
+			// Set date exceeding one day (2 days ago)
+			const olderDate = new Date();
+			olderDate.setDate(olderDate.getDate() - 2);
+			const olderDateStr = olderDate.toISOString().split('T')[0];
+			document.getElementById('older-date').textContent = olderDateStr;
+		</script>
 	</body>
 </html>
