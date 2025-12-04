@@ -6,7 +6,85 @@
 		<title>Data Table</title>
 	</head>
 	<body>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Text</th>
+					<th>Quantity</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2024-06-10</td>
+					<td>Updated entry one</td>
+					<td>50</td>
+					<td>25.50</td>
+				</tr>
+				<tr>
+					<td id="recent-date">2024-12-19</td>
+					<td>Recent entry</td>
+					<td>30</td>
+					<td>15.75</td>
+				</tr>
+				<tr>
+					<td id="older-date">2024-06-08</td>
+					<td>Older entry</td>
+					<td>75</td>
+					<td>42.00</td>
+				</tr>
+				<tr>
+					<td id="today-date">2024-12-04</td>
+					<td>Today's entry</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2024-12-04</td>
+					<td>SHOULD SUCCEED</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2024-12-0</td>
+					<td>SHOULD FAIL</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2025-12-04</td>
+					<td>SHOULD SUCCEED2</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2025-12-01</td>
+					<td>SHOULD FAIL2</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2025-12-04</td>
+					<td>SHOULD WORK3</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2025-12-01</td>
+					<td>SHOULD WORK4</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
+				<tr>
+					<td id="today-date">2025-11-01</td>
+					<td>SHOULD NOT WORK</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
 
+			</tbody>
+		</table>
 		<script>
 			// Set date within last one day (yesterday)
 			const yesterday = new Date();
