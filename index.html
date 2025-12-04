@@ -34,6 +34,12 @@
 					<td>75</td>
 					<td>42.00</td>
 				</tr>
+				<tr>
+					<td id="today-date">2024-12-04</td>
+					<td>Today's entry</td>
+					<td>20</td>
+					<td>18.99</td>
+				</tr>
 
 			</tbody>
 		</table>
@@ -49,6 +55,11 @@
 			olderDate.setDate(olderDate.getDate() - 2);
 			const olderDateStr = olderDate.toISOString().split('T')[0];
 			document.getElementById('older-date').textContent = olderDateStr;
+
+			// Set date within last one day (today)
+			const today = new Date();
+			const todayStr = today.toISOString().split('T')[0];
+			document.getElementById('today-date').textContent = todayStr;
 		</script>
 	</body>
 </html>
