@@ -3,80 +3,35 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Data Table</title>
+		<title>Job Listings</title>
 	</head>
 	<body>
+		<h1>Available Positions</h1>
 		<table border="1">
 			<thead>
 				<tr>
-					<th>Date</th>
-					<th>Text</th>
-					<th>Quantity</th>
-					<th>Price</th>
+					<th>Job Title</th>
+					<th>Department</th>
+					<th>Location</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>2024-06-10</td>
-					<td>Updated entry one</td>
-					<td>50</td>
-					<td>999.99</td>
+					<td><a href="software-engineer.html">Software Engineer</a></td>
+					<td>Engineering</td>
+					<td>San Francisco, CA</td>
 				</tr>
 				<tr>
-					<td id="recent-date">2024-12-19</td>
-					<td>Recent entry</td>
-					<td>300</td>
-					<td>99.99</td>
+					<td><a href="product-manager.html">Product Manager</a></td>
+					<td>Product</td>
+					<td>New York, NY</td>
 				</tr>
 				<tr>
-					<td id="older-date">2024-06-08</td>
-					<td>MODIFIED TEXT</td>
-					<td>75</td>
-					<td>99.99</td>
-				</tr>
-				<tr>
-					<td>2026-01-15</td>
-					<td>Laptop Computer</td>
-					<td>5</td>
-					<td>1299.99</td>
-				</tr>
-				<tr>
-					<td>2026-02-20</td>
-					<td>Wireless Mouse</td>
-					<td>150</td>
-					<td>29.99</td>
-				</tr>
-				<tr>
-					<td>2026-03-10</td>
-					<td>USB-C Cable</td>
-					<td>200</td>
-					<td>12.50</td>
-				</tr>
-				<tr>
-					<td id="today-date">2025-12-04</td>
-					<td>SHOULD SUCCEED2</td>
-					<td>20</td>
-					<td>18.99</td>
+					<td><a href="data-analyst.html">Data Analyst</a></td>
+					<td>Analytics</td>
+					<td>Austin, TX</td>
 				</tr>
 			</tbody>
 		</table>
-		<script>
-			// Set date within last one day (yesterday)
-			const yesterday = new Date();
-			yesterday.setDate(yesterday.getDate() - 1);
-			const yesterdayStr = yesterday.toISOString().split('T')[0];
-			document.getElementById('recent-date').textContent = yesterdayStr;
-
-			// Set date exceeding one day (2 days ago)
-			const olderDate = new Date();
-			olderDate.setDate(olderDate.getDate() - 2);
-			const olderDateStr = olderDate.toISOString().split('T')[0];
-			document.getElementById('older-date').textContent = olderDateStr;
-
-			// Set date within last one day (today)
-			const today = new Date();
-			const todayStr = today.toISOString().split('T')[0];
-			document.getElementById('today-date').textContent = todayStr;
-		</script>
 	</body>
 </html>
